@@ -58,6 +58,11 @@ export class Bishop extends Piece
     }
 
 
+    draw(context, piecesize)
+    {
+        this._draw(context, piecesize, "bishop");
+    }
+
 
     AllowedMoves()
     {
@@ -75,6 +80,12 @@ export class Knight extends Piece
         this.dx = [ -2, -1, 1, 2, -2, -1, 1, 2 ]
         this.dy = [ -1, -2, -2, -1, 1, 2, 2, 1 ]
         this.pos_list = []
+    }
+
+
+    draw(context, piecesize)
+    {
+        this._draw(context, piecesize, "knight");
     }
 
 
@@ -98,6 +109,12 @@ export class Rook extends Piece
     {
         super(start_pos, color)
     }
+
+
+    draw(context, piecesize)
+    {
+        this._draw(context, piecesize, "rook");
+    }
 }
 
 
@@ -108,6 +125,12 @@ export class Queen extends Piece
     {
         super(start_pos, color)
     }
+
+
+    draw(context, piecesize)
+    {
+        this._draw(context, piecesize, "queen");
+    }
 }
 
 
@@ -117,5 +140,11 @@ export class King extends Piece
     constructor()
     {
         super(start_pos, color)
+    }
+
+
+    draw(context, piecesize)
+    {
+        this._draw(context, piecesize, "king");
     }
 }
