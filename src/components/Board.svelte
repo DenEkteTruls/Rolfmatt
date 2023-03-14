@@ -4,6 +4,15 @@
 
     let board = new Board();
 
+    function clicked(event)
+    {
+        let x = event.clientX - 288;
+        let y = event.clientY - 30;
+
+        board.update_mouse_pos(x, y);
+    }
+
+
     $: render = ({ context, width, height }) => {
         context.clearRect(0, 0, width, height);
         let last_color = 1;
@@ -39,7 +48,7 @@
 
 
 <div class="container">
-    <Canvas width={600} height={600}>
+    <Canvas width={600} height={600} on:mousedown={clicked}>
         <Layer {render}/>
     </Canvas>
 </div>

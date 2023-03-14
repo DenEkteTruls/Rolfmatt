@@ -12,6 +12,7 @@ export class Piece{
     _draw(context, piecesize, piece) {
         let image = new Image(50, 50);
         image.src = "media/"+piece+"_"+this.color+".png";
+
         image.onload = () =>
         {
             context.drawImage(image, piecesize*this.pos.x+10, (piecesize*8)-piecesize*this.pos.y+10, piecesize-20, piecesize-20);
@@ -55,6 +56,11 @@ export class Bishop extends Piece
     constructor()
     {
         super(start_pos, color)
+        this.open_space = true
+        this.buffer_x = 0
+        this.buffer_y = 0
+        this.pos_list = []
+        this.posibilites = [{x: -1, y: 1, piece: true}, {x: -1, y: -1, piece: true}, {x: 1, y: 1, piece: true}, {x: 1, y: -1, piece: true}] //index 0 is left up, index 1 is left down, index 2 is right up, index 3 is right down 
     }
 
 
@@ -66,7 +72,21 @@ export class Bishop extends Piece
 
     AllowedMoves()
     {
-        
+        while(this.open_space === true){
+            this.buffer_x += 1
+            this.buffer_y +=1
+            for(let i = 0; i<this.list.length;i++){
+                if(this.posibilites[i].piece === true){
+                    if(this.pos.x+this.buffer_x*this.list[i].x < 8 && this.pos.x+this.buffer_y*this.list[i].x){
+                        if(board[this.pos.x+this.buffer_x*this.list[i].x][this.pos.y+this.buffer_x*this.list[i].y] == 0){
+                            this.pos_list.push({x: this.pos.x+this.buffer_x*this.list[i].x, y: this.pos.y+this.buffer_x*this.list[i].y})
+                        } else{
+                            this.posibilites[i].piece = false
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
