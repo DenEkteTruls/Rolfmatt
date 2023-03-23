@@ -5,8 +5,9 @@
 	let page = Home;
 
 	router("/", () => page = Home);
-
+	
 	router.start();
+
 </script>
 
 
