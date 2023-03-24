@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <title>RolfMatt - Register</title>
+        <link href="./css/login.css" rel="stylesheet"/>
+        <link href="./css/buttons.css" rel="stylesheet"/>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+        <script src="./js/firebase_initialize.js"></script>
+        <script src="./js/page/login-register.js"></script>
+    </head>
+    <body>
+        <div class="container fill-screen">
+            <div class="card">
+                <div class="gif-card">
+                    <img class="login-gif" alt="" id="random_gif" src="media/login-gifs/1.gif">
+                </div>
+                <div class="login-card">
+                    <input type="text" id="username" placeholder="Username" class="login-width text-entry small-text-entry">
+                    <input type="password" id="password" placeholder="Password" class="login-width text-entry small-text-entry">
+                    <button class="login-width active-button pointer green-fade" onclick="register()">Register</button>    
+                    <a href="login.html">I already have a user</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

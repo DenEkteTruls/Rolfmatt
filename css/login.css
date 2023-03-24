@@ -1,0 +1,59 @@
+@import url("./style.css");
+
+body {
+    background-color: whitesmoke;
+}
+
+.login-width {
+    width: 60%;
+    margin-top: 10px;
+}
+
+
+.fill-screen {
+    width: 100vw !important;
+    height: 100vh;
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+
+.card {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(128, 128, 128, 0.345);
+    border-radius: 15px;
+}
+
+
+.gif-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-card > #random_gif  {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    outline: 5px solid var(--lightgreen);
+    margin-top: 20px;
+}
+
+
+.login-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.login-card > a {
+    font-size: 12px;
+    margin-top: 35px;
+    color: var(--subtext);
+}

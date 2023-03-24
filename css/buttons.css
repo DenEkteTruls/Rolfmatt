@@ -1,0 +1,51 @@
+@import url("./style.css");
+
+.not-active-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    height: 3em;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.not-active-button:hover
+{
+    color: var(--blue);
+}
+
+.active-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    height: 50px;
+    background-color: var(--normalblue);
+    transition: all 0.2s ease;
+    width: calc(60% + 32px);
+}
+
+.active-button:hover
+{
+    background-color: var(--blue);
+}
+
+
+.big-button { font-size: 1.3em; padding: 1em 1.5em 1em 1.5em; height: 79px; }
+.mid-big-button { font-size: 1.3em; padding: 1em 1.5em 1em 1.5em; height: 60px; }
+.round-button { border-radius: 30px; }
+.mid-round-button { border-radius: 20px; }
+.green-fade:hover { background-color: var(--green); }
+.hoverscale { transform: scale(1.05); }
+.medium-size { font-size: 1.2em; height: 2.5em; width: 100%; padding: 0.5em 1em 0.5em 1em; }
+.full-button-width { width: 100%; }
